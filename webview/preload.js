@@ -145,7 +145,8 @@ window.addEventListener('DOMContentLoaded', () => {
                 let gridx = gridX[x][y];
                 let gridy = gridY[x][y];
                 // cv.style = `rgb(${gridx*20}, ${gridy*20}, ${(255-gridx*20-gridy*20)})`;
-                cv.style = `rgb(${(gridx+gridy)*20*(Math.sin(time/500)+1)}, ${gridy*20*(Math.cos(time/500)+1)}, ${(255-gridx*20-gridy*20)*(Math.tan(time/500)+1)})`;
+                // cv.style = `rgb(${(gridx+gridy)*20*(Math.sin(time/500)+1)}, ${gridy*20*(Math.cos(time/500)+1)}, ${(255-gridx*20-gridy*20)*(Math.tan(time/500)+1)})`;
+                cv.style = `rgb(${(gridx+gridy)*20}, ${gridy*20}, ${(255-gridx*20-gridy*20)})`;
                 cv.fillRect(nx, ny, res, res);
                 cv.line(nx - (gridx / 2), ny - (gridy / 2), nx + gridx, ny + gridy);
             }
