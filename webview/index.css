@@ -1,7 +1,3 @@
-:root {
-    --title: 30px;
-}
-
 * {
     background: black;
     overflow: hidden;
@@ -9,50 +5,9 @@
     padding: 0;
 }
 
-.tb {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: var(--title);
-    background-color: transparent;
-    color: white;
-    border-bottom: 1px inset rgba(255, 255, 255, 0.2);
-    -webkit-app-region: drag;
-    user-select: none;
-}
-
-.tb-title {
-    position: relative;
-    line-height: var(--title);
-    top: 0;
-    left: 0;
-    padding: 0 10px 0 10px;
-}
-
-.tb-button {
-    -webkit-app-region: no-drag;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: var(--title);
-    height: var(--title);
-    border: 0;
-    color: white;
-    background: transparent;
-}
-
-.tb-button * {
-    vertical-align: middle;
-}
-
-.tb-button:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
-
 .canvas {
     position: fixed;
-    top: var(--title);
+    top: 0;
     left: 0;
     background: transparent;
 }

@@ -4,6 +4,7 @@
         "height": 600
     },
     "window": {
-        "titlebar": 30
+        "titlebar": 30,
+        "title": "Rendering Magnetic Fields"
     }
 }

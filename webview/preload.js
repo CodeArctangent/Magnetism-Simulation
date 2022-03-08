@@ -4,31 +4,7 @@ const { Paper } = require('arctan.paper');
 const util = require('arctan.autle');
 
 let body;
-let canvas;
-let ctx;
 let cv;
-
-const roundfac = (n) => Math.round(n) == 1 ? 1 : -1;
-
-function titlebar() {
-    const div = document.createElement('div');
-    div.classList.add('tb');
-    const title = document.createElement('span');
-    title.classList.add('tb-title');
-    title.innerText = document.querySelector('title').innerText;
-    const close = document.createElement('button');
-    close.classList.add('tb-close', 'tb-button');
-    close.innerText = '✕';
-    div.append(title);
-    div.append(close);
-    return div;
-}
-
-function makeButtonsUsable() {
-    document.querySelector('.tb-close').addEventListener('click', () => {
-        window.close();
-    });
-}
 
 class Charge {
     constructor(x, y, power) {
@@ -77,8 +53,7 @@ function calculateGrid(gridx, gridy, charges, width, height, res) {
 
 window.addEventListener('DOMContentLoaded', () => {
     body = document.querySelector('body');
-    body.insertBefore(titlebar(), body.firstChild);
-    makeButtonsUsable();
+    document.querySelector('title').innerText = config.window.title;
     cv = new Paper('.canvas', config.simulation.width, config.simulation.height);
     cv.yUp = true;
     document.addEventListener('contextmenu', () => {

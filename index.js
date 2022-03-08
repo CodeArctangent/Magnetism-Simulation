@@ -5,12 +5,12 @@ const config = require('./config.json');
 function createWindow() {
     const win = new BrowserWindow({
         width: config.simulation.width,
-        height: config.simulation.height + config.window.titlebar,
-        frame: false,
+        height: config.simulation.height,
         webPreferences: {
             preload: path.join(__dirname, 'webview/preload.js')
         }
     });
+    win.setContentSize(config.simulation.width, config.simulation.height, false);
     win.loadFile('webview/index.html');
 }
 
