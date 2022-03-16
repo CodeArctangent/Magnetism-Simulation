@@ -11,7 +11,7 @@
   "dependencies": {
     "arctan.autle": "^1.0.0",
     "arctan.meridian": "1.2.3",
-    "arctan.paper": "^1.1.0",
+    "arctan.paper": "^1.2.0",
     "electron": "^16.0.0"
   }
 }
