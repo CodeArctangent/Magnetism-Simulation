@@ -66,8 +66,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const charges = [
         new Charge(0, 0, -10),
         new Charge(cv.width, cv.height, 10),
-        new Charge(cv.width, 0, -5),
-        new Charge(0, cv.height, 5)
+        // new Charge(cv.width, 0, -5),
+        // new Charge(0, cv.height, 5)
     ]
     const res = 8;
     let gridX = new Array(cv.width / res);
@@ -82,10 +82,10 @@ window.addEventListener('DOMContentLoaded', () => {
         charges[0].y = mouse[1];
         charges[1].x = -mouse[0] + cv.width;
         charges[1].y = -mouse[1] + cv.height;
-        charges[2].x = mouse[0];
-        charges[2].y = -mouse[1] + cv.height;
-        charges[3].x = -mouse[0] + cv.width;
-        charges[3].y = mouse[1];
+        // charges[2].x = mouse[0];
+        // charges[2].y = -mouse[1] + cv.height;
+        // charges[3].x = -mouse[0] + cv.width;
+        // charges[3].y = mouse[1];
         let final = calculateGrid(gridX, gridY, charges, cv.width, cv.height, res);
         gridX = final[0];
         gridY = final[1];
